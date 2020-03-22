@@ -24,13 +24,15 @@ public class Less15 {
     @Test
     public void Less15() {
         webDriver.get("https://yandex.ru");
-        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         WebElement input = webDriver.findElement(By.id("text"));
         input.sendKeys("руддщ цкщдв", Keys.ENTER);
-        //  WebElement button =webDriver.findElement(By.className("websearch-button__text"));
-        //  button.click();
-        WebElement expentedField = webDriver.findElement(By.className("uniq15833093538611"));
-        Assert.assertEquals(expentedField.getText(), "hello word");
+        WebElement button = webDriver.findElement(By.className("websearch-button__text"));
+        button.click();
+        webDriver.getTitle().equals("hello world");
+        webDriver.navigate().refresh();
+        WebElement expentedField = webDriver.findElement(By.id("uniq15833093538611"));
+        Assert.assertEquals(expentedField.getAttribute("value"), "hello world");
 
     }
 
