@@ -33,6 +33,7 @@ public class Less15 {
         webDriver.navigate().refresh();
         WebElement expentedField = webDriver.findElement(By.id("uniq15833093538611"));
         Assert.assertEquals(expentedField.getAttribute("value"), "hello world");
+        webDriver.getCurrentUrl();
     }
 
     @AfterMethod
