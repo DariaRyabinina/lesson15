@@ -31,14 +31,14 @@ public class Less15 {
         button.click();
         webDriver.getTitle().equals("hello world");
         webDriver.navigate().refresh();
-        WebElement expentedField = webDriver.findElement(By.id("uniq15862043435441"));
+        WebElement expentedField = webDriver.findElement(By.xpath("//input[@class='input__control mini-suggest__input']"));
         Assert.assertEquals(expentedField.getAttribute("value"), "hello world");
         webDriver.getCurrentUrl();
     }
 
-  //  @AfterMethod
-  //  public void closeDriver() {
-   //     webDriver.quit();
- //   }
+//    @AfterMethod
+//    public void closeDriver() {
+//        webDriver.quit();
+//    }
 
 }
