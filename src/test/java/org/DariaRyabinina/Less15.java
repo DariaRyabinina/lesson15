@@ -36,9 +36,9 @@ public class Less15 {
         webDriver.getCurrentUrl();
     }
 
-//    @AfterMethod
-//    public void closeDriver() {
-//        webDriver.quit();
-//    }
+    @AfterMethod
+    public void closeDriver() {
+        webDriver.quit();
+    }
 
 }
