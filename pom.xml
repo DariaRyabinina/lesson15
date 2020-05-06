@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.Daria.Ryabinina</groupId>
-    <artifactId>Lesson15</artifactId>
+    <artifactId>Less15</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -24,6 +24,6 @@
             <version>${testng.version}</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
-   </project>
+
+</project>

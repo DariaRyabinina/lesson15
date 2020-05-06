@@ -22,7 +22,7 @@ public class Less15 {
     }
 
     @Test
-    public void Less15() {
+    public void Less15УandexTest() {
         webDriver.get("https://yandex.ru");
         webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         WebElement input = webDriver.findElement(By.id("text"));
@@ -32,8 +32,7 @@ public class Less15 {
         webDriver.getTitle().equals("hello world");
         webDriver.navigate().refresh();
         WebElement expentedField = webDriver.findElement(By.xpath("//input[@class='input__control mini-suggest__input']"));
-        Assert.assertEquals(expentedField.getAttribute("value"), "hello world");
-        webDriver.getCurrentUrl();
+        Assert.assertEquals(expentedField.getAttribute("value"), "hello world1","Запрос не сдержит hello world. ");
     }
 
     @AfterMethod
